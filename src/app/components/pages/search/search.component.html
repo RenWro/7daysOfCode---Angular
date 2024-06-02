@@ -1,0 +1,24 @@
+<section class="page__search container">
+  <form [formGroup]="form" (ngSubmit)="search()">
+    <label for="category">Categoria:</label>
+    <select name="category" id="category" formControlName="category">
+      <option value="people">Pessoas</option>
+      <option value="planets">Planetas</option>
+      <option value="species">Especies</option>
+      <option value="starships">Starships</option>
+    </select>
+
+    <label for="search">Pesquisa:</label>
+    <input type="text" id="search" name="search" formControlName="search" />
+    <button type="submit">Buscar</button>
+  </form>
+  <!--
+  <div class="list-results">
+      <app-card *ngFor="let result of results">
+      <p>{{result}}</p>
+    </app-card>
+
+  </div>
+  -->
+</section>
+<router-outlet></router-outlet>
